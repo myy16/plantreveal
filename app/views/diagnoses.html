@@ -347,12 +347,16 @@ Details: ${diagnosis.details || 'N/A'}
 
         document.addEventListener('DOMContentLoaded', () => {
             loadAllComponents();
-            checkLogin();
             
-            // Initialize Bootstrap dropdowns
-            document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(el => {
-                new bootstrap.Dropdown(el);
-            });
+            // Wait for components to load, then check login
+            setTimeout(() => {
+                checkLogin();
+                
+                // Initialize Bootstrap dropdowns
+                document.querySelectorAll('[data-bs-toggle="dropdown"]').forEach(el => {
+                    new bootstrap.Dropdown(el);
+                });
+            }, 100);
         });
     </script>
 </body>

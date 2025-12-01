@@ -135,8 +135,9 @@ function initializeDummyDataForUser(email) {
         localStorage.setItem('profile', JSON.stringify(profile));
     }
     
-    // Set diagnoses data
-    localStorage.setItem('diagnoses', JSON.stringify(dummyDiagnoses));
+    // Set diagnoses data (each user gets their own copy)
+    const userDiagnoses = JSON.parse(JSON.stringify(dummyDiagnoses));
+    localStorage.setItem('diagnoses', JSON.stringify(userDiagnoses));
     
     // Set settings
     localStorage.setItem('settings', JSON.stringify({
