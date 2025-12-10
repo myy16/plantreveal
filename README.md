@@ -1,4 +1,4 @@
-# RevelPlant - AI Plant Diagnostics Platform
+# RevealPlant - AI Plant Diagnostics Platform
 
 ## 🧪 Demo & Test
 
